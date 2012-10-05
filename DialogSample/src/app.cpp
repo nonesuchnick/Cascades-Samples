@@ -36,9 +36,13 @@ App::App()
     qmlRegisterType<FileBrowseDialog>("Dialog.FileBrowse", 1, 0, "FileBrowseDialog");
     qmlRegisterType<FileSaveDialog>("Dialog.FileSave", 1, 0, "FileSaveDialog");
 
-    QmlDocument* qml = QmlDocument::create("main.qml");
-    qml->setContextProperty("cs", this);
+    QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
+    if (!qml->hasErrors()) {
+		qml->setContextProperty("theApp", this);
 
-    AbstractPane* root = qml->createRootNode<AbstractPane>();
-    Application::setScene(root);
+		AbstractPane *root = qml->createRootObject<AbstractPane>();
+		if (root) {
+			Application::instance()->setScene(root);
+		}
+    }
 }

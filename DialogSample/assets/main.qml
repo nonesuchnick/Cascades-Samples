@@ -25,15 +25,14 @@ Page {
     content: Container {
         background : Color.Black
         layout : StackLayout {
-            layoutDirection : LayoutDirection.TopToBottom
+            orientation : layout.TopToBottom
         }
         Label {
             id: alertDialogLabel
         }
         Button {
-            layoutProperties : StackLayoutProperties {
-                horizontalAlignment : HorizontalAlignment.Center
-            }
+            horizontalAlignment : HorizontalAlignment.Center
+
             text : "Simple Alert"
             onClicked: {
                 alertDialog.addCustomButton("Cheese","AlertDialog_Cheese");
@@ -46,9 +45,8 @@ Page {
             id: contextMenuLabel
         }
         Button {
-            layoutProperties : StackLayoutProperties {
-                horizontalAlignment : HorizontalAlignment.Center
-            }
+            horizontalAlignment : HorizontalAlignment.Center
+
             text : "Context Menu"
             onClicked: {
                 contextMenu.addCustomButton("Rotate","Menu_Rotate");
@@ -59,9 +57,8 @@ Page {
         Divider {}
         Label { id: promptDialogLabel }
         Button {
-            layoutProperties : StackLayoutProperties {
-                horizontalAlignment : HorizontalAlignment.Center
-            }
+            horizontalAlignment : HorizontalAlignment.Center
+
             text : "Prompt Dialog"
             onClicked: {
                 promptDialog.show();
@@ -70,9 +67,8 @@ Page {
         Divider {}
         Label { id: loginDialogLabel }
         Button {
-            layoutProperties : StackLayoutProperties {
-                horizontalAlignment : HorizontalAlignment.Center
-            }
+            horizontalAlignment : HorizontalAlignment.Center
+
             text : "Login Dialog"
             onClicked: {
                 loginDialog.addCustomButton("Something","Login_Something");
@@ -82,9 +78,8 @@ Page {
         Divider {}
         Label { id: filebrowseDialogLabel }
         Button {
-            layoutProperties : StackLayoutProperties {
-                horizontalAlignment : HorizontalAlignment.Center
-            }
+            horizontalAlignment : HorizontalAlignment.Center
+
             text : "File Browse Dialog"
             onClicked: {
                 filebrowseDialog.show();
@@ -93,9 +88,8 @@ Page {
         Divider {}
         Label { id: filesaveDialogLabel }
         Button {
-            layoutProperties : StackLayoutProperties {
-                horizontalAlignment : HorizontalAlignment.Center
-            }
+            horizontalAlignment : HorizontalAlignment.Center
+
             text : "File Save Dialog"
             onClicked: {
                 filesaveDialog.addCustomButton("delete","FileSave_delete");

@@ -13,6 +13,15 @@
  * limitations under the License.
  */
 
+/* THE BPS FUNCTIONS dialog_create_filebrowse AND dialog_create_filesave HAVE BEEN DEPRECATED!
+ * THEY NO LONGER LAUNCH DIALOGS UNDER SDK BETA3, BUT GENERATE AN ERROR EVENT INSTEAD.
+ * PLEASE USE filepicker INSTEAD. SEE THE filepicker EXAMPLE FOR DETAILS.
+ *
+ * https://developer.blackberry.com/cascades/reference/bb__cascades__pickers__filepicker.html
+ * http://blackberry.github.com/Cascades-Samples/pickers-filepicker.html
+ * https://github.com/blackberry/Cascades-Samples/tree/master/filepicker
+ */
+
 #include "FileBrowseDialog.hpp"
 #include <bps/bps.h>
 #include <QDebug>
