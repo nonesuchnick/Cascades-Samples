@@ -25,7 +25,7 @@ Page {
     content: Container {
         background : Color.Black
         layout : StackLayout {
-            orientation : layout.TopToBottom
+            orientation : LayoutOrientation.TopToBottom
         }
         Label {
             id: alertDialogLabel
